@@ -1,0 +1,22 @@
+<div>
+  <div class="row">
+    <ng-container *ngFor="let img of imageArr">
+      <div class="col-md-3">
+        {{ img.id }}
+        <div class="container">
+          <!-- pass img object as it is to imageClicked method -->
+          <img
+            class="img-click"
+            src="{{ img.imgPath }}"
+            alt="NA"
+            (click)="imageClicked(img)"
+            height="200"
+            width="100%"
+          />
+          <!-- since we won't show when the count is 0 -->
+          <div class="top-right" *ngIf="img.count != 0">{{ img.count }}</div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
