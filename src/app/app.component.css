@@ -1,16 +1,105 @@
+
+
+* {
+  box-sizing: border-box;
+  font-family: Lato;
+  --transition: 0.15s;
+  --border-radius: 0.9rem;
+  --background: #D3D3D3  ;
+  --box-shadow: #D3D3D3;
+}
+
+.cont-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width:80vw;
+  margin:0 auto;
+  display: grid;
+  grid-gap: 1vw;
+  grid-template-columns: repeat( auto-fit, minmax(250px,1fr) );
+}
+
 .img-click {
-    cursor: pointer;
-  }
-  .container {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-  /* Top right text */
-  .top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-    color: black;
-  }
+  cursor: pointer;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: black;
+}
+
   
+  .img{
+    width: 10%;
+    display: block;
+    box-shadow: 0 27px 10px  -20px rgba(0,0,0,0.2);
+  }
+
+.cont-checkbox {
+
+  input {
+    display: none;
+    &:checked + label {
+      opacity: 0.2;
+      .cover-checkbox {
+        opacity: 0.2;
+        transform: scale(1);
+        span {
+          stroke-dashoffset: 0;
+        }
+      }
+      img {
+        -webkit-filter: none; /* Safari 6.0 - 9.0 */
+        filter: none;
+      }
+    }
+  }
+  .cover-checkbox {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    z-index: 1;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: var(--box-shadow);
+    border: 2px solid #fff;
+    transition: transform var(--transition),
+      opacity calc(var(--transition) * 1.2) linear;
+    opacity: 0;
+    transform: scale(0);
+  }
+  label {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity : 1
+ }
+    .img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+
+      filter: grayscale(100%);
+    }
+
+    .info {
+      text-align: center;
+      margin-top: 0.2rem;
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: black;
+
+    }
+  }

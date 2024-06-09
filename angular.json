@@ -37,7 +37,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "/home/indimedi/Desktop/Angular/image-selector/node_modules/@angular/material/prebuilt-themes/azure-blue.css"
+
             ],
             "scripts": []
           },
@@ -99,8 +101,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
