@@ -1,3 +1,7 @@
+install @angular-devkit/build-angular in case any dependency error related to @angular-devkit/build-angular comes
+run "npm install --save-dev --force @angular-devkit/build-angular"
+
+
 # ImageSelector
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
