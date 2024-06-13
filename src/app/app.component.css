@@ -8,7 +8,7 @@
   --background: #D3D3D3  ;
   --box-shadow: #D3D3D3;
 }
-
+/* sets up responsive image grid */
 .cont-main {
   display: flex;
   flex-wrap: wrap;
@@ -43,7 +43,7 @@
     display: block;
     box-shadow: 0 27px 10px  -20px rgba(0,0,0,0.2);
   }
-
+/*checkbox for image*/
 .cont-checkbox {
 
   input {
