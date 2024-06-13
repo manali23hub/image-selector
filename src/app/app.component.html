@@ -16,15 +16,17 @@
         <div class="container">  
           <span class="cover-checkbox">
             <i class="fa fa-check hidden"></i>
+            //avoid showing number when count is 0 
             <div class="top-right" *ngIf="img.count != 0">{{ img.count }}</div>
           </span>
         <div class="cont-checkbox">
             <input type="checkbox" [id]="'myCheckbox-' + i"/>
             <label [for]="'myCheckbox-' + i">
-              
-              <img class="img-click" src="{{ img.imgPath }}" alt="NA" (click)="imageClicked(img)" height="200" width="100%"/>
+              //has function imageClicked(img) when clicked goes to ts file and performs the mentioned functionality for that particular image i.e. img
+              <img class="img-click" src="{{ img.imgPath }}" alt="NA" (click)="imageClicked(img)" height="150" width="100%"/>
               
             </label>
+            //displays image title
               <div class="info">{{ img.title }}</div>
           </div>
           </div>
